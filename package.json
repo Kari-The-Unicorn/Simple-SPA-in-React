@@ -2,7 +2,7 @@
   "name": "spa_in_react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kari-the-unicorn.github.io/spa_in_react/",
+  "homepage": "https://kari-the-unicorn.github.io/spa_in_react",
   "dependencies": {
     "gh-pages": "^1.1.0",
     "react": "^16.4.0",
