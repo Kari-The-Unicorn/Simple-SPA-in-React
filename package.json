@@ -5,16 +5,19 @@
   "homepage": "https://kari-the-unicorn.github.io/spa_in_react",
   "dependencies": {
     "gh-pages": "^1.1.0",
+    "material-ui": "^0.20.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-scripts": "1.1.4"
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "react-youtube": "^7.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -b master -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "eject": "react-scripts eject"
   }
 }
