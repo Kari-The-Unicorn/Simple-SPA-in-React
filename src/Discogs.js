@@ -2,7 +2,9 @@ import React, {
   Component
 } from "react";
 import ReactDOM from 'react-dom';
-import RaisedButton from "./Button";
+import RaisedButtonExampleSimple from "./Button";
+import RaisedButton from 'material-ui/RaisedButton';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 // import RaisedButton from 'material-ui/RaisedButton';
 // const cardContainer = document.querySelector('.discos');
 class Discogs extends Component {
@@ -10,12 +12,13 @@ class Discogs extends Component {
     return ( <div>
       <h2> DISCOGRAPHY </h2> 
       <p> See their dicography below. </p> 
-    <div> { /* <RaisedButton  /> */ } {
+    <div> {
         /* <RaisedButton label="Primary" primary={true}  />
             <RaisedButton label="Secondary" secondary={true}  />
             <RaisedButton label="Disabled" disabled={true}  /> */
       } <br / >
-      <br / > { /* <RaisedButtonExampleSimple/> */ } </div> <Card / ></div>
+      <br / >  
+      <RaisedButtonExampleSimple/> </div> <Card / ></div>
     );
   }
 }
@@ -88,11 +91,19 @@ class CardFront extends React.Component {
           <div > < img src = { disco.src}/></div > < /li>
         )} </ul> 
         </div> 
-        <p><button className = "btn btn-primary" onClick = {this.showMore} > 
-        {this.state.expanded ? ( <span > Show less < /span>
-        ) : ( < span > Show more < /span>
-        )
-      } </button> </p> </div> </div>
+        <p>
+        <MuiThemeProvider>
+       
+        <RaisedButton label={this.state.expanded ? "Show less" : "Show more"}  secondary={true} onClick = {this.showMore}/>
+         </MuiThemeProvider>
+        
+      { /*//   <button className = "btn btn-primary" onClick = {this.showMore} > 
+      //   {this.state.expanded ? ( <span > Show less < /span>
+      //   ) : ( < span > Show more < /span>
+      //   )
+      // } </button> */ }
+
+      </p> </div> </div>
     )
   }
 }
